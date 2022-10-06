@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet"type="text/css"href="Num.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><strong>CONTACT_US</br> @ Chicken House</strong></h1>
+<form>
+    <p>
+        <strong>Enter CustomerName:</strong>
+        <input class="Name"type="text"name="Name"placeholder="Name......"/>
+    </p>
+    <p>
+        <strong>Enter Email:</strong>
+        <input class="email"type="email"name="email"placeholder="email......."/>
+    </p>
+    <p>
+        <strong>Type Message:</strong>
+        <textarea class="msg"rows="20"cols="100"placeholder="Type Here Your Message"></textarea>
+    </p>
+    <button type="submit">SEND</button>
+</form>
+<script type="text/js"src="Num.js"></script>
+<script>
+     const form=document.querySelector(".contact_form"),
+function sending(e){
+    e.preventDefault();
+name=document.querySelector("name"),
+email=document.querySelector("email"),
+msg=document.querySelector("msg"),
+Email,Send({
+    SecureToken:"C97307AD-F097-91E4-40ABC5567812",
+    To:"namugayarose3@gmail.com",
+    From:"akotinobrendah@gmail.com",
+    Subject:  "Contact-Form",
+    Body:"msg.value"
+}).then(
+    message  => alert(message)
+);
+}
+form.addEventListener("submit",sendMsg);
+    </script>
+</body>
+</html>
